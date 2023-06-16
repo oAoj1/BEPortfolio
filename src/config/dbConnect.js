@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
-const conexao = process.env.MONGO_CONNECT
 
-mongoose.connect(conexao)
+mongoose.connect(process.env.MONGO_CONNECT)
 
 const db = mongoose.connection
 

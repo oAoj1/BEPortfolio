@@ -10,6 +10,8 @@ const db = require('./config/dbConnect.js')
 const skillRouter = require('./routes/skillsRoutes.js')
 const certificatesRouter = require('./routes/certificatesRoutes.js')
 const aboutMeRouter = require('./routes/aboutMeRoutes.js')
+const projectsRouter = require('./routes/projectsRoutes.js')
+const passwordRoute = require('./routes/passwordRoute.js')
 
 /*  */
 
@@ -27,7 +29,9 @@ app.use(
     express.json(),
     skillRouter,
     certificatesRouter,
-    aboutMeRouter
+    aboutMeRouter,
+    projectsRouter,
+    passwordRoute
 )
 
 /*  */

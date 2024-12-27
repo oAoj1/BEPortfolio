@@ -1,7 +1,9 @@
+require('dotenv').config()
+
 const mongoose = require('mongoose')
 
-mongoose.connect("mongodb+srv://joao:123@portfolio.mtflh4c.mongodb.net/portfolio")
+mongoose.connect(process.env.MONGO_CONNECT)
 
 const db = mongoose.connection
 
-module.exports = db 
+module.exports = db  

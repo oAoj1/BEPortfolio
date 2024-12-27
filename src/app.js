@@ -1,5 +1,3 @@
-/*  */
-
 require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
@@ -13,7 +11,7 @@ const aboutMeRouter = require('./routes/aboutMeRoutes.js')
 
 /*  */
 
-const port = process.env.PORT || 5555
+const port = process.env.PORT
 const app = express()
 
 /*  */
@@ -43,7 +41,5 @@ db.on('error', () => {
 /*  */
 
 app.get('/', (req,res) => {
-    res.send('Bem vindo ao meu portfólio')
+    res.send('Portfólio')
 })
-
-console.log(process.env.MONGO_CONNECT)
